@@ -1,0 +1,18 @@
+{
+  "name": "youtube-video-summarizer",
+  "version": "1.0.0",
+  "description": "A full-stack application for YouTube video summarization",
+  "scripts": {
+    "install:all": "npm run install:frontend && npm run install:backend && npm run install:n8n",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:n8n": "cd n8n && npm install",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\" \"npm run dev:n8n\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && nhost dev",
+    "dev:n8n": "cd n8n && n8n start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
